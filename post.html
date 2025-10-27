@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Building My Personal AI Stack | Your Blog</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --accent: #242434;
+        --bg: #959698;
+        --fg: #191d22;
+        --muted: #000916;
+      }
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        font-family: "Alegreya Sans", sans-serif;
+        background: var(--bg);
+        color: var(--fg);
+        line-height: 1.8;
+        padding: 0 1rem;
+      }
+      header {
+        text-align: center;
+        padding: 3rem 1rem 2rem;
+        border-bottom: 1px solid #1e293b;
+      }
+      header h1 {
+        font-size: 2rem;
+        color: var(--accent);
+        margin-bottom: 0.3rem;
+      }
+      header p.meta {
+        color: var(--muted);
+        font-size: 0.95rem;
+      }
+      nav {
+        margin-top: 1rem;
+      }
+      nav a {
+        color: var(--fg);
+        text-decoration: none;
+        margin: 0 1rem;
+        font-weight: 500;
+        transition: color 0.2s;
+      }
+      nav a:hover {
+        color: var(--accent);
+      }
+      article {
+        max-width: 800px;
+        margin: 3rem auto;
+        font-size: 1.05rem;
+      }
+      article h2 {
+        color: var(--accent);
+        margin: 2rem 0 0.5rem;
+        font-size: 1.5rem;
+      }
+      article p {
+        margin-bottom: 1rem;
+        color: var(--fg);
+      }
+      article code {
+        background: #1e293b;
+        padding: 0.2rem 0.4rem;
+        border-radius: 4px;
+        font-family: monospace;
+        color: #93c5fd;
+      }
+      footer {
+        text-align: center;
+        padding: 3rem 1rem 1.5rem;
+        color: var(--muted);
+        border-top: 1px solid #1e293b;
+        font-size: 0.95rem;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <h1>Building My Personal AI Stack</h1>
+      <p class="meta">October 27, 2025 · 5 min read</p>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="blog.html">Blog</a>
+      </nav>
+    </header>
+
+    <article>
+      <p>
+        Over the past few months, I’ve been experimenting with running large
+        language models locally — including <code>Ollama</code>,
+        <code>Whisper.cpp</code>, and lightweight databases like
+        <code>DuckDB</code> for embedding storage and retrieval.
+      </p>
+
+      <h2>Why Go Local?</h2>
+      <p>
+        Running your own AI stack gives you full control over privacy, latency,
+        and experimentation. Instead of relying on cloud APIs, you can fine-tune
+        and query your own models offline.
+      </p>
+
+      <h2>Tools I Used</h2>
+      <p>
+        - <b>Ollama</b> for running models like Llama 3 locally.<br />
+        - <b>Whisper.cpp</b> for transcribing audio offline.<br />
+        - <b>DuckDB</b> for storing structured embeddings efficiently.<br />
+      </p>
+
+      <h2>Next Steps</h2>
+      <p>
+        I’m working on integrating these tools into a cohesive developer toolkit
+        that makes it simple to run offline AI workflows for research and
+        productivity.
+      </p>
+
+      <p>
+        <a href="blog.html" style="color: var(--accent); text-decoration: none"
+          >← Back to Blog</a
+        >
+      </p>
+    </article>
+
+    <footer>© 2025 Taahirah Denmark · Built with 💻 and ☕</footer>
+  </body>
+</html>

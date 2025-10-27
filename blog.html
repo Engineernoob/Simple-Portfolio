@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Your Name | Blog</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --accent: #f2f2f7;
+        --bg: #646568;
+        --fg: #f8f8f8;
+        --muted: #151516;
+      }
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        font-family: "Alegreya Sans", sans-serif;
+        background: var(--bg);
+        color: var(--fg);
+        line-height: 1.7;
+      }
+      header {
+        text-align: center;
+        padding: 3.5rem 1rem 2rem;
+        border-bottom: 1px solid #2f3e56;
+      }
+      header h1 {
+        font-size: 2.5rem;
+        color: var(--accent);
+      }
+      header p {
+        color: var(--muted);
+        font-size: 1.1rem;
+        margin-top: 0.5rem;
+      }
+      nav {
+        margin-top: 1.5rem;
+      }
+      nav a {
+        color: var(--fg);
+        text-decoration: none;
+        margin: 0 1rem;
+        font-weight: 500;
+        transition: color 0.2s;
+      }
+      nav a:hover {
+        color: var(--accent);
+      }
+      main {
+        max-width: 800px;
+        margin: 3rem auto;
+        padding: 0 1rem;
+      }
+      article {
+        background: #3d506f;
+        padding: 1.5rem 1.75rem;
+        border-radius: 10px;
+        margin-bottom: 2rem;
+        transition: transform 0.25s, background 0.25s;
+      }
+      article:hover {
+        transform: translateY(-4px);
+        background: #27344e;
+      }
+      article h2 {
+        font-size: 1.6rem;
+        color: var(--fg);
+        margin-bottom: 0.3rem;
+      }
+      article p.meta {
+        color: var(--muted);
+        font-size: 0.9rem;
+        margin-bottom: 1rem;
+      }
+      article a.readmore {
+        color: var(--accent);
+        text-decoration: none;
+        font-weight: 500;
+      }
+      article a.readmore:hover {
+        text-decoration: underline;
+      }
+      footer {
+        text-align: center;
+        padding: 3rem 1rem 1.5rem;
+        color: var(--muted);
+        border-top: 1px solid #212e42;
+        font-size: 0.95rem;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <h1>Blog</h1>
+      <p>Writing about code, design, and creativity</p>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="blog.html">Blog</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main id="blog-posts">
+      <!-- Posts will be inserted here by JavaScript -->
+    </main>
+
+    <footer>© 2025 Taahirah Denmark · Built with 💻 and ☕</footer>
+
+    <script>
+      const posts = [
+        {
+          title: "Building My Personal AI Stack",
+          date: "October 27, 2025",
+          readTime: "5 min read",
+          summary:
+            "Over the past few months, I’ve been experimenting with running LLMs locally — Ollama, Whisper.cpp, and DuckDB for data indexing. Here’s what I learned about balancing privacy, speed, and model accuracy...",
+          link: "post.html",
+        },
+        {
+          title: "Designing Minimal Interfaces with Purpose",
+          date: "October 20, 2025",
+          readTime: "3 min read",
+          summary:
+            "Good design isn’t about adding more; it’s about removing friction. In this post, I explore how minimalist UI principles can make your projects feel more intentional and emotionally resonant.",
+          link: "posts/minimal-interfaces.html",
+        },
+        {
+          title: "From Idea to Launch: How I Built VillaCard",
+          date: "September 30, 2025",
+          readTime: "6 min read",
+          summary:
+            "VillaCard started as a weekend experiment and turned into a full AI-powered concierge app. Here’s how I went from concept to deployment using Supabase, Next.js, and Tailwind.",
+          link: "posts/villacard.html",
+        },
+        {
+          title: "Balancing Pressure and Purpose: What My Mom Taught Me About Resilience",
+          date: "October 27, 2025",
+          readTime: "6 min read",
+          summary:
+            "A reflection on ambition, family expectations, and building a career in tech at your own pace.",
+          link: "posts/balancing.html",
+        }
+      ];
+
+      const container = document.getElementById("blog-posts");
+      posts.forEach((post) => {
+        const article = document.createElement("article");
+        article.innerHTML = `
+        <h2>${post.title}</h2>
+        <p class="meta">${post.date} · ${post.readTime}</p>
+        <p>${post.summary}</p>
+        <a href="${post.link}" class="readmore">Read more →</a>
+      `;
+        container.appendChild(article);
+      });
+    </script>
+  </body>
+</html>
