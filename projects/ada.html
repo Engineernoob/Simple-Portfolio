@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- SEO -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ada — Local AI Assistant | Taahirah Denmark</title>
+    <meta
+      name="description"
+      content="Ada is a locally run AI assistant built by Taahirah Denmark, integrating Whisper.cpp, Ollama, and DuckDB to create a private, voice-driven AI workflow."
+    />
+    <meta name="author" content="Taahirah Denmark" />
+    <meta name="robots" content="index, follow" />
+    <link
+      rel="canonical"
+      href="https://taahirahcodes.netlify.app/.dev/projects/ada.html"
+    />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="article" />
+    <meta
+      property="og:title"
+      content="Ada — Local AI Assistant | Taahirah Denmark"
+    />
+    <meta
+      property="og:description"
+      content="A local-first AI assistant by Taahirah Denmark that listens, reasons, and automates offline workflows."
+    />
+    <meta
+      property="og:image"
+      content="https://taahirah.dev/assets/og/ada.jpg"
+    />
+    <meta property="og:url" content="https://taahirah.dev/projects/ada.html" />
+    <meta property="og:site_name" content="Taahirah Denmark" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Ada — Local AI Assistant | Taahirah Denmark"
+    />
+    <meta
+      name="twitter:description"
+      content="A local AI assistant that uses Whisper.cpp, Ollama, and DuckDB for offline automation."
+    />
+    <meta
+      name="twitter:image"
+      content="https://taahirah.dev/assets/og/ada.jpg"
+    />
+    <meta name="twitter:creator" content="@taahirahdenmark" />
+
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+
+  <body>
+    <header>
+      <h1>Ada — Local AI Assistant</h1>
+      <p class="meta">Built by Taahirah Denmark · 2025</p>
+      <nav>
+        <a href="../index.html">Home</a>
+        <a href="../blog.html">Blog</a>
+      </nav>
+    </header>
+
+    <article>
+      <h2>Overview</h2>
+      <p>
+        Ada is my personal AI assistant — designed to run locally, entirely
+        offline. She listens, speaks, and automates using a hybrid of on-device
+        inference and modular command pipelines. The goal was to create an AI
+        that respects privacy, performs efficiently, and feels deeply integrated
+        with the local system.
+      </p>
+
+      <h2>Core Architecture</h2>
+      <ul>
+        <li><b>Whisper.cpp</b> — real-time speech-to-text on CPU.</li>
+        <li>
+          <b>Ollama</b> — local LLM engine (Llama 3, Mistral, Gemma, etc.).
+        </li>
+        <li><b>DuckDB</b> — fast local vector store for semantic memory.</li>
+        <li>
+          <b>Python + Node.js bridge</b> — to run CLI commands, automate tasks,
+          and respond via TTS.
+        </li>
+      </ul>
+
+      <h2>Example Workflow</h2>
+      <pre><code>
+User: "Ada, summarize my notes from today."
+Ada → Transcribes audio → Generates embedding context via DuckDB → 
+Calls Ollama locally → Responds with voice synthesis.
+      </code></pre>
+
+      <h2>Features</h2>
+      <ul>
+        <li>🎙️ Voice-based conversation using Whisper.cpp</li>
+        <li>🧠 Local LLM reasoning with contextual memory</li>
+        <li>⚙️ CLI automation for developer productivity</li>
+        <li>🔒 Private by design — no external API calls</li>
+        <li>
+          🌐 Modular architecture for easy extensions (calendar, notes, search)
+        </li>
+      </ul>
+
+      <h2>Technical Challenges</h2>
+      <p>
+        Running multiple models locally required careful optimization of memory
+        and I/O. Ada uses lazy loading, streaming inference, and persistent
+        DuckDB caching to maintain responsiveness on consumer hardware (Intel
+        Arc GPU + M2 Mac).
+      </p>
+
+      <h2>Results</h2>
+      <p>
+        Ada can process natural voice commands in real time, execute local
+        automation scripts, and provide conversational feedback without internet
+        access. She’s a demonstration of local-first AI design — fast, private,
+        and personal.
+      </p>
+
+      <h2>Stack & Tools</h2>
+      <ul>
+        <li>Python 3.11</li>
+        <li>FastAPI / Flask (API layer)</li>
+        <li>Node.js + Electron (UI prototype)</li>
+        <li>Ollama, Whisper.cpp, DuckDB</li>
+      </ul>
+
+      <h2>Demo</h2>
+      <p>
+        🎥
+        <a href="../demos/ada-demo.mp4" target="_blank">Watch the demo video</a
+        ><br />
+        💻
+        <a href="https://github.com/Engineernoob/Ada" target="_blank"
+          >View source on GitHub</a
+        >
+      </p>
+
+      <p style="margin-top: 2rem">
+        <a
+          href="../index.html"
+          style="color: var(--accent); text-decoration: none"
+          >← Back to Portfolio</a
+        >
+      </p>
+    </article>
+
+    <footer>© 2025 Taahirah Denmark · Built with 💻 and ☕</footer>
+  </body>
+</html>
